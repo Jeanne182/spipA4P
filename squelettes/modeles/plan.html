@@ -1,0 +1,42 @@
+[(#REM)
+	Le plan de site ci-dessous est a adapter selon les besoins.
+	En particulier, on n'aura pas necessairement besoin de tous les elements (sous-rubriques, articles, breves et sites)
+]
+<BOUCLE_secteurs(RUBRIQUES) {racine} {par num titre}{!par date}>
+
+<h2 class="text-dark-blue">#TITRE</h2>
+
+<B_rubriques>
+<ul class="spip">
+	<BOUCLE_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}>
+		<strong class="flex-column column-centered"><a class="text-black text-left" href="#URL_RUBRIQUE">#TITRE</a></strong>
+		<div>		
+			<BOUCLE_sous_rubriques(RUBRIQUES)></BOUCLE_sous_rubriques>
+			[(#REM)(BOUCLE_rubriques)]
+
+		</div>
+	</BOUCLE_rubriques>
+</ul>
+</B_rubriques>
+
+[(#REM) Breves ]
+<B_breves>
+<h3><:breves:breves:></h3>
+<div class="spip">
+	<BOUCLE_breves(BREVES) {id_rubrique} {!par date}>
+	<h4><a href="#URL_BREVE">#TITRE</a></h4>
+	</BOUCLE_breves>
+</div>
+</B_breves>
+
+[(#REM) Sur le Web ]
+<!-- <B_sites>
+<h3><:sites_web:></h3>
+<ul class="spip">
+	<BOUCLE_sites(SITES) {id_secteur} {par nom_site}>
+	<li><a href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a></li>
+	</BOUCLE_sites>
+</ul>
+</B_sites> -->
+
+</BOUCLE_secteurs>

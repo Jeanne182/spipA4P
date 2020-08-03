@@ -1,0 +1,178 @@
+		
+		<div class="formulaire_spip formulaire_signature ajax page-padding" id="sp#ENV{id_petition}">
+
+		[<p class="reponse_formulaire reponse_formulaire_ok success">(#ENV*{message_ok,#ENV*{_confirm}|affiche_reponse_confirmation})</p>]
+		[<p class="reponse_formulaire reponse_formulaire_erreur error">(#ENV*{message_erreur})</p>]
+		#ENV{editable}
+		<form id="contactForm" class='no-gutters' method="post" action="#ENV{action}#sp#ENV{id_petition}">
+			#ACTION_FORMULAIRE
+			
+				<input type="hidden" name="url_page" value="[(#SELF|url_absolue)]" />
+				<fieldset class="info">
+					<h2 class="page-section-heading text-center text-dark-blue text-uppercase mb-0"><:petitions:titre_petition:></h2>
+					<div class="divider-custom">
+						<div class="divider-custom-line"></div>
+					</div>
+				</fieldset>
+				<fieldset id="engagement-form">
+					<!-- <legend><:form_forum_identifiants:></legend> -->
+
+					
+					<div class="editer-groupe">
+
+						<!-- Nom et prénom -->
+						<div class='flex-row'>
+							<div id='firstname-container' class='flex-column'>
+								<div class='form-group floating-label-form-group controls mb-0 pb-2 editer saisie_prenom[ (#ENV*{erreurs}|table_valeur{session_prenom}|oui)erreur] obligatoire'>
+									<label for="session_prenom"><:petitions:form_pet_votre_prenom:><:info_obligatoire_03:></label>
+									<input type="text" class="form-control" name="session_prenom" id="session_prenom" value="#ENV{session_prenom}" size="30" />
+								</div>
+								[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_prenom})</span>]
+							</div>
+							
+							<div id='lastname-container' class='flex-column'>
+								<div class='form-group floating-label-form-group controls mb-0 pb-2 editer saisie_nom_email[ (#ENV*{erreurs}|table_valeur{session_nom}|oui)erreur] obligatoire'>
+									<label for="session_nom"><:petitions:form_pet_votre_nom:><:info_obligatoire_03:></label>
+									<input type="text" class="form-control" name="session_nom" id="session_nom" value="#ENV{session_nom}" size="30" />
+								</div>
+								[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_nom})</span>]
+							</div>
+
+						</div>
+										
+						<!-- Année de naissance -->
+						<div id='birthday-container' class='form-group floating-label-form-group controls mb-0 pb-2 editer saisie_naissance[ (#ENV*{erreurs}|table_valeur{session_naissance}|oui)erreur] obligatoire'>
+							<label for="session_naissance"><:petitions:form_pet_votre_annee_naissance:><:info_obligatoire_03:></label>
+							<input type="text" class="form-control" name="session_naissance" id="session_naissance" value="#ENV{session_naissance}" size="30" />
+						</div>
+						[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_naissance})</span>]
+						
+						<div id='email-container' class='form-group floating-label-form-group controls mb-0 pb-2 editer saisie_adresse_email[ (#ENV*{erreurs}|table_valeur{session_email}|oui)erreur] obligatoire'>
+							<label for="session_email"><:petitions:form_pet_votre_email:><:info_obligatoire_03:></label>
+							<input type="text" class="form-control" name="session_email" id="session_email" value="#ENV{session_email}" size="30" />
+						</div>
+						[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_email})</span>]
+
+						<!-- Ecole et localisation -->
+						<div class="flex-row">
+							<div id="country-container"  class='flex-column'>
+								<div class='form-group floating-label-form-group controls mb-0 pb-2 editer saisie_pays[ (#ENV*{erreurs}|table_valeur{session_pays}|oui)erreur] obligatoire'>
+									<label for="session_pays"><:petitions:form_pet_pays_ecole:><:info_obligatoire_03:></label>
+									<select type="text" name="session_pays" id="session_pays" class="form-control" data-value="#ENV{session_pays}">
+									<option value=""></option>
+									<BOUCLE_p(pays)>
+										<option value="#ID_PAYS">#NOM</option>
+									</BOUCLE_p>
+									</select>
+								</div>	
+								[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_pays})</span>]
+							</div>
+
+							<div id="ecole-container">
+								<div class='form-group select-label floating-label-form-group controls mb-0 pb-2 editer saisie_nom_ecole[ (#ENV*{erreurs}|table_valeur{session_ecole}|oui)erreur] obligatoire'>
+									<label for="session_ecole"><:petitions:form_pet_votre_ecole_alumni:><:info_obligatoire_03:></label>
+									<div id='selectEcole'>
+										<select type="text" class="form-control" name="session_ecole" id="session_ecole" data-value="#ENV{session_ecole}">
+										</select>
+									</div>
+								</div>
+								[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_ecole})</span>]
+							</div>
+						</div>
+
+						<div id='ecole-ajout-container' class='form-group floating-label-form-group controls mb-0 pb-2 editer saisie_nom_ecole[ (#ENV*{erreurs}|table_valeur{session_ecole_ajout}|oui)erreur] obligatoire'>
+							<label for="session_ecole_ajout"><multi>[fr]Votre école n'est pas présente dans la liste ? Ajoutez-la ![en]Your school is not in the list ? Please register it!</multi> </label>
+							[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_ecole_ajout})</span>]
+							<input type="text" class="form-control" name="session_ecole_ajout" id="session_ecole_ajout" value="#ENV{session_ecole_ajout}" size="30" />
+						</div>
+						
+						<label class="container-checkbox agreement text-justify[ (#ENV*{erreurs}|table_valeur{validation_ajout_ecole}|oui)erreur]">En cochant cette case, vous comprenez que votre établissement ne sera visible qu'après validation de notre part. Vous serez notifié·e de notre décision par email.<:info_obligatoire_03:>
+							<input name="validation_ajout_ecole" aria-checked="true" type="checkbox" value="Validate">
+							<span class="checkmark agreement-checkmark"></span>
+							[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{validation_ajout_ecole})</span>]
+						</label>
+						
+						<!-- Engagement association d'alumni -->
+						<div id='adhesion-container' class='form-group flex-row controls mb-0 pb-2[ (#ENV*{erreurs}|table_valeur{session_ecole_ajout}|oui)erreur] obligatoire'>
+							<label for="session_adhesion" class='text-dark-blue'><multi>[fr]Etes-vous adhérent à l'association d'alumni de votre école ? [en]Are you member of an alumni group ?</multi> </label>
+							[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_adhesion})</span>]
+							
+								<label class="container-checkbox selector text-black text-justify[ (#ENV*{erreurs}|table_valeur{validation_adhesion}|oui)erreur]"><multi>[fr]Oui[en]Yes</multi>
+									<input name="membre_asso_alumni_oui" aria-checked="true" type="radio" value="oui">
+									<span class="checkmark selector-checkmark"></span>
+								</label>
+								<label class="container-checkbox selector text-black text-justify"><multi>[fr]Non[en]No</multi>
+									<input name="membre_asso_alumni_non" aria-checked="true" type="radio" value="non">
+									<span class="checkmark selector-checkmark"></span>
+								</label>
+							
+						</div>
+
+						<!-- LinkedIn -->
+						<div id='linkedin-container' class='form-group floating-label-form-group controls mb-0 pb-2 editer saisie_adresse_email[ (#ENV*{erreurs}|table_valeur{session_email}|oui)erreur] obligatoire'>
+							<label for="session_linkedin"><multi>[fr]Votre compte LinkedIn[en]Your LinkedIn account</multi></label>
+							<input type="text" class="form-control" name="session_linkedin" id="session_linkedin" value="#ENV{session_linkedin}" size="30" />
+						</div>
+						<span id="for-info-message-linkedin" class="h7">Pour renseigner cette information, rendez-vous sur <a class='link' href="https://www.linkedin.com/in/" target="_blank">votre compte LinkedIn</a> et copiez-collez l'URL de la barre de navigation.</span>
+						[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_linkedin})</span>]
+
+						<!-- Entreprise/organisation -->
+						<div class="flex-row mb-lg-4">
+							<div id="organisation-container"  class='flex-column'>
+								<div class='form-group floating-label-form-group controls mb-0 pb-2'>
+									<label for="session_entreprise"><multi>[fr]Le nom de votre entreprise/organisation[en]The name of your company/organization</multi></label>
+									<input type="text" class="form-control" name="session_entreprise" id="session_entreprise" value="#ENV{session_entreprise}" size="30" />
+								</div>
+							</div>
+
+							<div id='fonction-container' class='flex-column'>
+								<div class='form-group floating-label-form-group controls mb-0 pb-2'>
+									<label for="session_fonction"><multi>[fr]La fonction que vous occupez dans votre entreprise/organisation[en]Your role in your company</multi></label>
+									<input type="text" class="form-control" name="session_fonction" id="session_fonction" value="#ENV{session_fonction}" size="30" />
+								</div>
+							</div>
+						</div>
+					
+						<!-- Localisation entreprise -->
+						<h6 class="primary-font text-dark-blue font-weight-light">
+							<span>Pays et ville de votre entreprise :</span>
+							<span class="link primary-font pointer" id="location_inputs">
+								Rechercher votre localisation
+							</span>
+						</h6>
+						
+						<div class="location-formular opacity-0">
+							<div role="document">
+								<div class="flex-row">
+									[(#INCLURE{fond=inclure/formulaire_localisation,env,ajax})]
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<label class="container-checkbox agreement text-justify"><multi>[fr]En cochant cette case, vous acceptez que vos informations soient visibles sur le site publique Alumni For The Planet. Cela permettra à d'autres alumni de vous contacter.</multi>
+						<input name="validation_info_publiques" aria-checked="true" type="checkbox" value="Validate">
+						<span class="checkmark agreement-checkmark"></span>
+					</label>
+				</fieldset>
+				[(#REM) Piege a robots spammeurs ]
+				<p style="display: none;">
+					<label for="nobot"><:antispam_champ_vide:></label>
+					<input type="text" class="text" name="nobot" id="nobot" value="#ENV{nobot}" size="10" />
+				</p>
+
+				[(#ENV{_message})
+				<fieldset>
+					<legend><:petitions:form_pet_message_commentaire:></legend>
+					<div class="editer-groupe">
+						<div class='editer saisie_message'>
+							<label for="message"><:petitions:info_texte_message:></label>
+							<textarea name="message" id="message" rows="6" cols="60">#ENV{message}</textarea>
+						</div>
+					</div>
+				</fieldset>]
+				<p class="boutons"><input id="sendMessageButton" type="submit" class="submit btn btn-primary btn-xl" value="<:bouton_valider:>" /></p>
+
+		</form>
+		</div>
+		[<script type="text/javascript" src="(#PRODUIRE{fond=js/ecole.js})"></script>]

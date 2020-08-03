@@ -1,0 +1,111 @@
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+    
+    <section class="figures-section section-padding-top" id="figures">
+        
+            <div class="flex-row" style="width: 100%;">
+                <span class=flex-column>
+                    [<h4 id="paragraph" class="text-black #EDIT{texte}">(#_principale:TEXTE)</h4>]
+                </span>
+                <BOUCLE_article_head(ARTICLES){id_rubrique}{titre="10. Head"}>
+                    <div class='picture image-paragraph ml-4' style="background-image: url('[IMG/(#LOGO_ARTICLE|fichier)]');"></div>
+                </BOUCLE_article_head>
+            </div>
+            
+    </section>
+    <section class="figures-section section-padding mt-5" id="figures">
+        <BOUCLE_article_head_questions(ARTICLES){id_rubrique}{titre="10. Head"}>
+            [<h5 class="text-primary text-center primary-font #EDIT{texte}">(#TEXTE)</h5>]
+        </BOUCLE_article_head_questions>
+    </section>
+
+    <section class="page-section portfolio section-padding-bottom mt-5" id="portfolio">      
+        <BOUCLE_difficulte_article(RUBRIQUES){id_parent=#ID_RUBRIQUE}{titre_mot="difficulte_article"}{par num titre}>
+            
+                <h5 class="portfolio-item mx-auto bg-secondary mt-5 text-white text-center primary-font no-gutters">#TITRE</h5>
+            
+            <ul>
+                <BOUCLE_sites_articles(SITES) {id_rubrique} {par nom_site}{syndication=non}>
+                    <a href="#URL_SITE" class="flex-row mt-4 hover-site column-centered" target="_blank">
+                        <div class='picture image-paragraph ml-4 rounded-circle-7' style="background-image: url('[IMG/(#LOGO_SITE|fichier)]');">
+                            <div class='colored-hover text-center text-white rounded-circle-7'></div>
+                        </div>
+                        <span class="flex-column row-centered">
+                            <h6 class='primary-font text-dark-blue'>#NOM_SITE</h6>
+                            [<div class='l-h-12'>(#DESCRIPTIF)</div>]
+                        </span>
+                    </a>
+                </BOUCLE_sites_articles>  
+            </ul>       
+        </BOUCLE_difficulte_article>           
+    </section>
+
+    <section class="page-section portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <BOUCLE_sousRubriques(RUBRIQUES){id_parent=#ID_RUBRIQUE}>
+                    <BOUCLE_mots(MOTS){id_rubrique}{titre='difficulte_article'}> </BOUCLE_mots>
+                        <a href="#URL_RUBRIQUE" class="col-md-6 col-lg-4 mb-5">
+                            <div class="portfolio-item mx-auto bg-secondary" > <!-- data-toggle="modal" data-target="#portfolioModal[(#ID_RUBRIQUE)]" -->
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                [<img class="img-fluid" src="(#LOGO_RUBRIQUE|extraire_attribut{src})" alt="" />]
+                                <h5 class="text-white primary-font flex-column column-centered">#TITRE</h5>
+                            </div>
+                        </a>            
+                        <INCLURE{fond=inclure/pop,id_rubrique} />                                         
+                    <//B_mots>
+                    
+
+                </BOUCLE_sousRubriques>
+            </div>
+        </div>
+    </section>
+
+    <section id='sites-syndic-section' class='flex-column'>
+        <B_sites>
+        <div class="menu flex-column column-centered">
+            <h2 class="text-primary title text-uppercase"><:sur_web:></h2>
+            <ul class='flex-column column-centered'>
+                    
+                    <BOUCLE_sites(SITES) {id_rubrique} {par nom_site}{syndication=oui}>
+                    
+                        <a class='text-black website-title' href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a>
+                        #LOGO_SITE
+                        <B_syndic>
+                        
+                            <div class='articles-container flex-wrap space-between'>
+                                <BOUCLE_syndic(SYNDIC_ARTICLES) {id_syndic} {age<365} {!par date} {0,3}>
+                                <div class="article-syndic-container flex-column column-centered">
+                                    <a href="#URL_ARTICLE" class='text-black syndic-article-title text-xl-center' target='_blank'>#TITRE</a>
+                                    [<div class='text-black'><img src="(#TAGS|afficher_tags{enclosure}|extraire_attribut{href})"/></div>]
+                                    [<div class='text-black'><img src="(#DESCRIPTIF|extraire_balise{img}|extraire_attribut{src})"/></div>]
+                                    
+                                        [<div class='text-justify' style='margin-top:2rem;'>(#DESCRIPTIF|extraire_balise{p})</div>]
+                                        [(#DESCRIPTIF|extraire_balise{p}|non)
+                                            [<div class='text-justify' style='margin-top:2rem;'>(#DESCRIPTIF)</div>]
+                                        ]
+                                    <a href="#URL_ARTICLE"  target='_blank' class='text-white syndic-article-title text-uppercase read-button'><multi>[fr]Lire la suite[en]Continue reading</multi></a>
+                                </div>
+                            </BOUCLE_syndic>
+                            </div>
+                        </B_syndic>
+                    
+                    </BOUCLE_sites>
+                
+            </ul>
+        </div>
+        </B_sites>
+</section>
+
+<section class="page-padding">
+    <h5>Voir aussi</h5>
+    <ul>
+        <BOUCLE_sousRubrique(RUBRIQUES){meme_parent}{!id_rubrique}>
+            <BOUCLE_rubriques_invisibles(MOTS){id_rubrique}{titre='invisible'}> </BOUCLE_rubriques_invisibles>
+            <li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+            <//B_rubriques_invisibles>
+        </BOUCLE_sousRubrique>
+    </ul>
+</section>
+</BOUCLE_principale>

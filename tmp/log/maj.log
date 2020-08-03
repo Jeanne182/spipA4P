@@ -1,0 +1,226 @@
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: maj meta compagnon_base_version_maj_init etape 0: compagnon_create 
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: compagnon_base_version_maj_init: ok
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: meta compagnon_base_version: init en 0 secondes
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: maj meta compagnon_base_version_maj_1.0.0 etape 0: inc_config_dist 
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: compagnon_base_version_maj_1.0.0: ok
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: meta compagnon_base_version: 1.0.0 en 0 secondes
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. compagnon_base_version: 1.0.0
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: maj meta forum_base_version_maj_init etape 0: maj_tables Array
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: forum_base_version_maj_init: ok
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: meta forum_base_version: init en 0 secondes
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: maj meta forum_base_version_maj_1.2.2 etape 0: inc_config_dist 
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: forum_base_version_maj_1.2.2: ok
+2020-06-22 14:13:39 ::1 (pid 20708) :Pri:!INFO: meta forum_base_version: 1.2.2 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. forum_base_version: 1.2.2
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta mots_base_version_maj_init etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: mots_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta mots_base_version: init en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta mots_base_version_maj_2.1.1 etape 0: inc_config_dist 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: mots_base_version_maj_2.1.1: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta mots_base_version: 2.1.1 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. mots_base_version: 2.1.1
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta organiseur_base_version_maj_1.1.0 etape 0: sql_updateq spip_messages,Array,statut='redac'
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: organiseur_base_version_maj_1.1.0: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta organiseur_base_version_maj_1.1.0 etape 1: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: organiseur_base_version_maj_1.1.0: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta organiseur_base_version: 1.1.0 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta organiseur_base_version_maj_1.1.1 etape 0: sql_alter TABLE spip_messages CHANGE id_auteur id_auteur bigint(21) DEFAULT 0 NOT NULL
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: organiseur_base_version_maj_1.1.1: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta organiseur_base_version: 1.1.1 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta organiseur_base_version_maj_1.1.2 etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: organiseur_base_version_maj_1.1.2: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta organiseur_base_version: 1.1.2 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. organiseur_base_version: 1.1.2
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta petitions_base_version_maj_init etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: petitions_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta petitions_base_version: init en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta petitions_base_version_maj_1.1.6 etape 0: inc_config_dist 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: petitions_base_version_maj_1.1.6: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta petitions_base_version: 1.1.6 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. petitions_base_version: 1.1.6
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta revisions_base_version_maj_init etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: revisions_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta revisions_base_version_maj_init etape 1: revisions_upate_meta 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: revisions_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta revisions_base_version: init en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta revisions_base_version_maj_1.2.0 etape 0: inc_config_dist 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: revisions_base_version_maj_1.2.0: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta revisions_base_version: 1.2.0 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. revisions_base_version: 1.2.0
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta sites_base_version_maj_1.1.0 etape 0: sql_alter TABLE spip_syndic_articles DROP key url
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: sites_base_version_maj_1.1.0: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta sites_base_version_maj_1.1.0 etape 1: sql_alter TABLE spip_syndic_articles CHANGE url url text DEFAULT '' NOT NULL
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: sites_base_version_maj_1.1.0: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta sites_base_version_maj_1.1.0 etape 2: sql_alter TABLE spip_syndic_articles ADD INDEX url(url(255))
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: sites_base_version_maj_1.1.0: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta sites_base_version: 1.1.0 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta sites_base_version_maj_1.1.1 etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: sites_base_version_maj_1.1.1: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta sites_base_version: 1.1.1 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. sites_base_version: 1.1.1
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta stats_base_version_maj_1.0.1 etape 0: ecrire_meta activer_referers,oui
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: stats_base_version_maj_1.0.1: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta stats_base_version: 1.0.1 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. stats_base_version: 1.0.1
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta svp_base_version_maj_init etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: svp_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta svp_base_version: init en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta svp_base_version_maj_0.5.1 etape 0: inc_config_dist 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: svp_base_version_maj_0.5.1: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta svp_base_version: 0.5.1 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. svp_base_version: 0.5.1
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta urls_base_version_maj_init etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: urls_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta urls_base_version: init en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta urls_base_version_maj_2.0.1 etape 0: inc_config_dist 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: urls_base_version_maj_2.0.1: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta urls_base_version: 2.0.1 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. urls_base_version: 2.0.1
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta medias_base_version_maj_init etape 0: maj_tables Array
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: medias_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta medias_base_version_maj_init etape 1: creer_base_types_doc 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: medias_base_version_maj_init: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta medias_base_version: init en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: maj meta medias_base_version_maj_1.3.5 etape 0: inc_config_dist 
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: medias_base_version_maj_1.3.5: ok
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: meta medias_base_version: 1.3.5 en 0 secondes
+2020-06-22 14:13:40 ::1 (pid 20708) :Pri:!INFO: MAJ terminee. medias_base_version: 1.3.5
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: maj meta pays_base_version_maj_init etape 0: maj_tables Array
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: pays_base_version_maj_init: ok
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: maj meta pays_base_version_maj_init etape 1: peupler_base_pays 
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: pays_base_version_maj_init: ok
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: meta pays_base_version: init en 0 secondes
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: maj meta pays_base_version_maj_1.4.3 etape 0: inc_config_dist 
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: pays_base_version_maj_1.4.3: ok
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: meta pays_base_version: 1.4.3 en 0 secondes
+2020-06-24 08:08:04 ::1 (pid 33116) :Pri:!INFO: MAJ terminee. pays_base_version: 1.4.3
+2020-06-24 14:12:00 ::1 (pid 33116) :Pri:!INFO: MAJ terminee. html5up_solid_state_base_version: 
+2020-06-24 15:48:54 ::1 (pid 33116) :Pri:!INFO: maj meta pages_base_version_maj_init etape 0: maj_tables spip_articles
+2020-06-24 15:48:54 ::1 (pid 33116) :Pri:!INFO: pages_base_version_maj_init: ok
+2020-06-24 15:48:54 ::1 (pid 33116) :Pri:!INFO: meta pages_base_version: init en 0 secondes
+2020-06-24 15:48:54 ::1 (pid 33116) :Pri:!INFO: maj meta pages_base_version_maj_1.0.1 etape 0: inc_config_dist 
+2020-06-24 15:48:54 ::1 (pid 33116) :Pri:!INFO: pages_base_version_maj_1.0.1: ok
+2020-06-24 15:48:54 ::1 (pid 33116) :Pri:!INFO: meta pages_base_version: 1.0.1 en 0 secondes
+2020-06-24 15:48:54 ::1 (pid 33116) :Pri:!INFO: MAJ terminee. pages_base_version: 1.0.1
+2020-07-01 07:31:42 127.0.0.1 (pid 18184) :Pri:!INFO: maj meta jquerysuperfish_base_version_maj_init etape 0: ecrire_config jquerysuperfish,Array
+2020-07-01 07:31:42 127.0.0.1 (pid 18184) :Pri:!INFO: jquerysuperfish_base_version_maj_init: ok
+2020-07-01 07:31:42 127.0.0.1 (pid 18184) :Pri:!INFO: meta jquerysuperfish_base_version: init en 0 secondes
+2020-07-01 07:31:42 127.0.0.1 (pid 18184) :Pri:!INFO: maj meta jquerysuperfish_base_version_maj_0.2 etape 0: inc_config_dist 
+2020-07-01 07:31:43 127.0.0.1 (pid 18184) :Pri:!INFO: jquerysuperfish_base_version_maj_0.2: ok
+2020-07-01 07:31:43 127.0.0.1 (pid 18184) :Pri:!INFO: meta jquerysuperfish_base_version: 0.2 en 1 secondes
+2020-07-01 07:31:43 127.0.0.1 (pid 18184) :Pri:!INFO: MAJ terminee. jquerysuperfish_base_version: 0.2
+2020-07-09 13:25:19 ::1 (pid 22960) :Pri:!INFO: maj meta cog_base_version_maj_init etape 0: maj_tables Array
+2020-07-09 13:25:19 ::1 (pid 22960) :Pri:!INFO: cog_base_version_maj_init: ok
+2020-07-09 13:25:19 ::1 (pid 22960) :Pri:!INFO: maj meta cog_base_version_maj_init etape 1: cog_peupler_base 
+2020-07-09 13:25:19 ::1 (pid 22960) :Pri:!INFO: cog_base_version_maj_init: ok
+2020-07-09 13:25:19 ::1 (pid 22960) :Pri:!INFO: meta cog_base_version: init en 0 secondes
+2020-07-09 13:25:19 ::1 (pid 22960) :Pri:!INFO: maj meta cog_base_version_maj_1.4 etape 0: inc_config_dist 
+2020-07-09 13:25:20 ::1 (pid 22960) :Pri:!INFO: cog_base_version_maj_1.4: ok
+2020-07-09 13:25:20 ::1 (pid 22960) :Pri:!INFO: meta cog_base_version: 1.4 en 1 secondes
+2020-07-09 13:25:20 ::1 (pid 22960) :Pri:!INFO: MAJ terminee. cog_base_version: 1.4
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 0: sql_alter TABLE spip_articles ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 1: sql_alter TABLE spip_articles ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 2: sql_alter TABLE spip_auteurs ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 3: sql_alter TABLE spip_auteurs ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 4: sql_alter TABLE spip_rubriques ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 5: sql_alter TABLE spip_rubriques ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 6: sql_alter TABLE spip_forum ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 7: sql_alter TABLE spip_forum ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:12 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 8: sql_alter TABLE spip_mots ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 9: sql_alter TABLE spip_mots ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 10: sql_alter TABLE spip_groupes_mots ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 11: sql_alter TABLE spip_groupes_mots ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 12: sql_alter TABLE spip_messages ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 13: sql_alter TABLE spip_messages ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 14: sql_alter TABLE spip_syndic ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 15: sql_alter TABLE spip_syndic ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 16: sql_alter TABLE spip_syndic_articles ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 17: sql_alter TABLE spip_syndic_articles ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 18: sql_alter TABLE spip_depots ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 19: sql_alter TABLE spip_depots ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 20: sql_alter TABLE spip_plugins ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 21: sql_alter TABLE spip_plugins ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 22: sql_alter TABLE spip_paquets ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:13 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 23: sql_alter TABLE spip_paquets ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 24: sql_alter TABLE spip_petitions ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 25: sql_alter TABLE spip_petitions ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 26: sql_alter TABLE spip_ecoles_alumni ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 27: sql_alter TABLE spip_ecoles_alumni ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 28: sql_alter TABLE spip_signatures ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 29: sql_alter TABLE spip_signatures ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 30: sql_alter TABLE spip_breves ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 31: sql_alter TABLE spip_breves ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 32: sql_alter TABLE spip_documents ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 33: sql_alter TABLE spip_documents ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 34: sql_alter TABLE spip_pays ADD composition varchar(255) DEFAULT '' NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 35: sql_alter TABLE spip_pays ADD composition_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_init etape 36: sql_alter TABLE spip_rubriques ADD composition_branche_lock tinyint(1) DEFAULT 0 NOT NULL
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_init: ok
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: meta compositions_base_version: init en 2 secondes
+2020-07-16 11:50:14 ::1 (pid 10656) :Pri:!INFO: maj meta compositions_base_version_maj_0.5.0 etape 0: inc_config_dist 
+2020-07-16 11:50:15 ::1 (pid 10656) :Pri:!INFO: compositions_base_version_maj_0.5.0: ok
+2020-07-16 11:50:15 ::1 (pid 10656) :Pri:!INFO: meta compositions_base_version: 0.5.0 en 3 secondes
+2020-07-16 11:50:15 ::1 (pid 10656) :Pri:!INFO: MAJ terminee. compositions_base_version: 0.5.0
+2020-07-22 10:31:20 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_init etape 0: maj_tables Array
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_init: ok
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_init etape 1: maj_tables Array
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_init: ok
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: meta gis_base_version: init en 1 secondes
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_2.1.0 etape 0: inc_config_dist 
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_2.1.0: ok
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: meta gis_base_version: 2.1.0 en 1 secondes
+2020-07-22 10:31:21 127.0.0.1 (pid 18892) :Pri:!INFO: MAJ terminee. gis_base_version: 2.1.0
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_init etape 0: maj_tables Array
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_init: ok
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_init etape 1: maj_tables Array
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_init: ok
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: meta gis_base_version: init en 0 secondes
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_2.1.0 etape 0: inc_config_dist 
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_2.1.0: ok
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: meta gis_base_version: 2.1.0 en 0 secondes
+2020-07-22 11:01:54 127.0.0.1 (pid 18892) :Pri:!INFO: MAJ terminee. gis_base_version: 2.1.0
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_init etape 0: maj_tables Array
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_init: ok
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_init etape 1: maj_tables Array
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_init: ok
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: meta gis_base_version: init en 0 secondes
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: maj meta gis_base_version_maj_2.1.0 etape 0: inc_config_dist 
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: gis_base_version_maj_2.1.0: ok
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: meta gis_base_version: 2.1.0 en 0 secondes
+2020-07-22 11:33:28 127.0.0.1 (pid 18892) :Pri:!INFO: MAJ terminee. gis_base_version: 2.1.0

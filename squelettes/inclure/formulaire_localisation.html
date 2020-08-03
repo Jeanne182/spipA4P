@@ -1,0 +1,34 @@
+
+		
+[(#ID_GIS|oui)
+[(#AUTORISER{modifier,gis,#ID_GIS})]
+][(#ID_GIS|non)
+[(#AUTORISER{creer,gis,#ID_GIS,'','',#ARRAY{associer_objet,#ENV{associer_objet}}})]
+]
+#SET{redirect,#ENV{redirect,#ENV{id_gis}|?{#URL_ECRIRE{gis,id_gis=#ID_GIS},#URL_ECRIRE{gis_tous}}}}
+
+#SET{objet, #ENV{objet, ''}}
+#SET{id_objet, #ENV{id_objet, 0}}
+[(#ENV{associer_objet}|oui)
+[(#SET{array_objet, #ENV{associer_objet}|explode{'|'}})]
+#SET{objet, #GET{array_objet}|table_valeur{0}}
+#SET{id_objet, #GET{array_objet}|table_valeur{1}}
+]
+<div class='cadre-formulaire-editer'>
+<div class="entete-formulaire">
+[(#ID_GIS|oui)
+[(#GET{redirect}|icone_verticale{<:icone_retour:>,gis,'',left retour[(#ENV{retourajax,''}|oui)ajax preload]})]
+]
+
+</div>
+
+#SET{redirect,#ENV{redirect,#ID_GIS|generer_url_entite{gis}}}
+[(#ENV{retourajax,''}|oui)
+
+<div class="ajax">
+]
+    [(#FORMULAIRE_EDITER_GIS{#ENV{id_gis,oui},#GET{objet},#GET{id_objet},'',#ENV{associer_objet}})]
+[(#ENV{retourajax,''}|oui)
+</div>
+
+]

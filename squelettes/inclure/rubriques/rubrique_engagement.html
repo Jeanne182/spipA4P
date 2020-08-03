@@ -1,0 +1,39 @@
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+	  
+	<section class="section-padding-top flex-column column-centered">
+		<BOUCLE_redirection(RUBRIQUES){meme_parent}>
+			<BOUCLE_mots(MOTS){id_rubrique}{titre_mot='rubrique_manifeste'}>
+				<a href="#URL_RUBRIQUE" class="submit btn btn-xxl text-black-50">
+					<multi>[fr]Lire le manifeste[en]Read the manifesto</multi>
+				</a>
+			</BOUCLE_mots>
+		</BOUCLE_redirection>
+	</section>
+	<div class="engagement-list-container section-padding-top">
+		<BOUCLE_engagements(RUBRIQUES){id_parent}>
+			<h4 class="flex-row row-centered primary-font text-dark-blue #EDIT{titre}">#TITRE</h4>
+				<BOUCLE_numEngagement(ARTICLES){id_rubrique}>
+				<h4 id="paragraph" class="text-black flex-row column-centered engagement-list-item text-justify" style="margin-left: [(#COMPTEUR_BOUCLE|alterner{'6vw','10vw'})]; margin-right: [(#COMPTEUR_BOUCLE|alterner{'10vw','6rem'})];">
+					<div class='list-number text-yellow'>
+						#RANG.
+					</div>
+					<div class='engagements-list primary-font #EDIT{titre}'>#TITRE</div>
+				</h4>
+			</BOUCLE_numEngagement>
+		</BOUCLE_engagements>
+	</div>
+	<INCLURE{fond=inclure/petition,id_article=1,env,ajax} />
+
+	<section class="section-padding-bottom flex-column column-centered">
+		
+				<BOUCLE_rubrique_alumni_proches(RUBRIQUES){titre_mot='rubrique_alumni_proches'}>
+					<a href="#URL_RUBRIQUE" class="submit btn btn-xxl text-black-50">
+						<multi>[fr]Voir la liste et la carte des signataires[en]See the map and list of signatures</multi>
+					</a>
+				</BOUCLE_rubrique_alumni_proches>
+			
+	</section>
+
+</div>
+</section>
+</BOUCLE_principale>

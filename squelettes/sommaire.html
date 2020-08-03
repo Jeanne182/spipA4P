@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+[(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
+    <head>
+        <title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
+        <INCLURE{fond=inclure/head} />  
+    </head>
+    <body id="page-top">
+        <INCLURE{fond=inclure/header} />
+
+        <!-- Masthead-->
+            <BOUCLE_accueil(RUBRIQUES){racine}>
+                <BOUCLE_mots_rubrique_accueil(MOTS){id_rubrique}{titre_mot='rubrique_accueil'}>
+                    <BOUCLE_mots_header(RUBRIQUES){titre_mot='header'}>
+                    <header class="masthead home-masthead bg-primary text-white text-center flex-column row-centered" style="background-image: url('[(#LOGO_RUBRIQUE|extraire_attribut{src})]');">
+                        <div class="container d-flex align-items-center flex-column column-centered">
+                            <!-- Masthead Avatar Image-->
+                            <span class='logo-container'>
+                                <img class="masthead-avatar" src="[(#_mots_rubrique_accueil:LOGO_RUBRIQUE|extraire_attribut{src})]" alt="" />
+                            </span>
+                            <script>
+                                var navHeight = $('#mainNav').outerHeight();
+                                $('.logo-container').css('margin-top', navHeight);;
+                            </script>
+                            <p class="masthead-subheading font-weight-light mb-0"><multi>[fr]Rejoignez le mouvement des Alumni For The Planet[en]Join the Alumni For The Planet organization</multi></p>
+                        </div>
+                    </header>
+                    </BOUCLE_mots_header>
+                </BOUCLE_mots_rubrique_accueil>
+            </BOUCLE_accueil>
+        
+        
+
+        <!-- Figures Section-->
+        <section class="page-section figures-section page-padding" id="figures">
+            <h1>ALUMNI FOR THE PLANET en quelques chiffres</h1>
+            <div id="figures-presentations"></div>
+        </section>
+
+        <!-- Why Section-->
+        <section class="page-section bg-primary" id="why-section">
+            <div class="picture" id="why-picture"></div>
+            <div id='why-paragraph' class="text-white page-padding">
+                <h1 id="why-section-title" class="title text-primary">POURQUOI ?</h1>
+                <h4 id="paragraph" class="text-white">Sous nos yeux les signes visibles des dérèglements environnementaux (canicules, incendies, inondations, déforestation, perte de biodiversité…), aux conséquences écologiques et humaines dramatiques (migrations climatiques, épidmies, inégalités, conflits…), se multiplient. Devant ce constat, et après les appels toujours plus pressants des scientifiques, médecins, sociologues et économistes, des ONG, des associations citoyennes, puis nos propres enfants se sont mobilisés pour agir pour un monde plus juste et plus respectueux de ses habitants.</h4>
+                </p>
+                <h4 id="paragraph" class="text-primary">Voir le site : Manifeste étudiant pour un réveil écologique</h4>
+            </div>
+        </section>
+
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
+                        <i class="fas fa-download mr-2"></i>
+                        Free Download!
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+
+        
+        <!-- SPIP -->
+        <INCLURE{fond=inclure/footer,self=#SELF} />
+
+        <!-- Bootstrap core JS-->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <!-- <script src="assets/mail/jqBootstrapValidation.js"></script> -->
+        <!-- <script src="assets/mail/contact_me.js"></script> -->
+        <!-- Core theme JS-->
+        [<script src="(#CHEMIN{js/scripts.js})"></script>]
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<body>
+	<div id="page-wrapper">
+		<header id="header"[(#ENV{type-page}|=={sommaire}|oui) class="alt"]>
+			<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
+			<INCLURE{fond=inclure/topnav, lang} />
+		</header>
+
+		<nav id="menu">
+			<div class="inner">
+				<INCLURE{fond=inclure/topmenu, lang} />
+				<a href="#" class="close">Fermer</a>
+			</div>
+		</nav>
+
+		<section id="banner">
+			<div class="inner">
+				<INCLURE{fond=header/#ENV{type-page},env} />
+			</div>
+		</section>
+
+		<section id="wrapper">
+			<div class="inner">
+				<INCLURE{fond=content/#ENV{type-page},env} />
+			</div>
+		</section>
+
+		<section id="footer">
+			<div class="inner">
+				<INCLURE{fond=footer/#ENV{type-page},env} />
+				<INCLURE{fond=inclure/footer,env} />
+			</div>
+		</section>
+	</div>
+</body>

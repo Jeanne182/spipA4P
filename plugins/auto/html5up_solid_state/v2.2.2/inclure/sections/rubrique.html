@@ -1,0 +1,17 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<section id="rubrique_#ID_RUBRIQUE" class="wrapper[ (#ENV{class})][ (#ENV{spot}|?{spotlight})][ style(#ENV{position})][ (#ENV{alt,#ENV{position}}|alterner{'', alt})]">
+	<div class="inner">
+		[(#ENV{spot}|oui)
+			[<span class="image">(#LOGO_RUBRIQUE|html5up_image_reduire_carre{300})</span>]
+		]
+		[<div class="texte #EDIT{texte}">(#TEXTE|adaptive_images{1210})</div>]
+		[<div class="notes">(#NOTES)</div>]
+		[(#ENV{spot}|oui)
+			</div>
+		]
+
+		<INCLURE{fond=inclure/documents, id_rubrique, ajax, env} />
+	</div>
+</section>
+</BOUCLE_rubrique>
+

@@ -1,0 +1,59 @@
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+[(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
+<head>
+	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+	<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+	[<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
+	[<link rel="canonical" href="(#URL_ARTICLE|url_absolue)" />]
+	<INCLURE{fond=inclure/head} />
+</head>
+
+<body id="page-top">
+
+<INCLURE{fond=inclure/header-rubrique,id_rubrique} />
+
+
+	<BOUCLE_mots(MOTS){id_rubrique}{titre_mot IN 'rubrique_manifeste','rubrique_engagement','rubrique_engagements_pris', 'rubrique_alumni_proches'}>
+
+		<BOUCLE_test_manifeste(CONDITION){si #TITRE|=={'rubrique_manifeste'}}>
+			<INCLURE{fond=inclure/rubriques/rubrique_manifeste,id_rubrique} />
+		</BOUCLE_test_manifeste>
+
+		<BOUCLE_test_engagement(CONDITION){si #TITRE|=={'rubrique_engagement'}}>
+			<INCLURE{fond=inclure/rubriques/rubrique_engagement,id_rubrique,env} />
+		</BOUCLE_test_engagement>
+
+		<BOUCLE_test_engagements_pris(CONDITION){si #TITRE|=={'rubrique_engagements_pris'}}>
+			<INCLURE{fond=inclure/rubriques/rubrique_engagements_pris,id_rubrique} />
+		</BOUCLE_test_engagements_pris>
+
+		<BOUCLE_test_alumni_proches(CONDITION){si #TITRE|=={'rubrique_alumni_proches'}}>
+			<INCLURE{fond=inclure/rubriques/rubrique_alumni_proches,id_rubrique} />
+		</BOUCLE_test_alumni_proches>
+
+
+	</BOUCLE_mots>
+		<INCLURE{fond=inclure/rubriques/rubrique_basique,id_rubrique} />
+	<//B_mots>
+
+
+	<!-- SPIP -->
+	<INCLURE{fond=inclure/footer,self=#SELF} />
+
+	<!-- Bootstrap core JS-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+	<!-- Third party plugin JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<!-- Core theme JS-->
+	[<script src="(#CHEMIN{js/scripts.js})"></script>]
+
+</body>
+</html>
+</BOUCLE_principale>

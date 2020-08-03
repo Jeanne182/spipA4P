@@ -1,0 +1,68 @@
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+	<BOUCLE_articles(ARTICLES) {id_rubrique}{par num titre}>		
+		
+		<BOUCLE_test10(CONDITION){si #RANG|=={10}}> </BOUCLE_test10>
+			<section class="page-section">
+					<div id='why-paragraph' class="text-white page-padding">
+					<a><h1 id="why-section-title" class="title text-center text-primary primary-font #EDIT{titre}">#TITRE</h1></a>
+					<span class='flex-row'>
+						<div class='picture image-paragraph' style="background-image: url('[IMG/(#LOGO_ARTICLE|fichier)]');"></div>
+						<span class=flex-column>
+							[<h4 id="paragraph" class="text-black #EDIT{sous_titre}">(#SOUS_TITRE)</h4>]
+							[<h4 id="paragraph" class="text-black #EDIT{chapeau}">(#CHAPEAU)</h4>]
+							[<h4 id="paragraph" class="text-black  primary-font #EDIT{texte}">(#TEXTE)</h4>]
+						</span>
+					</span>
+					
+					
+				</div>
+			</section>
+		</B_test10>
+		
+
+		<BOUCLE_test20(CONDITION){si #RANG|=={20}}> </BOUCLE_test20>
+			<section class="page-section">
+				<div class="picture" id="why-picture"></div>
+				<div id='why-paragraph' class="text-black section-padding">
+					<h1 id="why-section-title" class="title text-primary text-center text-uppercase #EDIT{titre}">#TITRE</h1>
+					<h4 id="paragraph" class="text-black #EDIT{texte} primary-font">#TEXTE</h4>
+				</div>
+			</section>
+		</B_test20>
+		
+		<BOUCLE_test30(CONDITION){si #RANG|=={30}}> </BOUCLE_test30>
+			<section class="page-section">
+				<div id='why-paragraph' class="text-white page-padding">
+					<a><h1 id="why-section-title" class="title text-primary text-center #EDIT{titre}">#TITRE</h1></a>
+					<h4 id="paragraph" class="text-black #EDIT{sous_titre}">#SOUS_TITRE</h4>
+					<h4 id="paragraph" class="text-black #EDIT{chapeau}">#CHAPEAU</h4>
+					<h4 id="paragraph" class="text-black primary-font #EDIT{texte}">#TEXTE</h4>
+					<div class='picture image-paragraph' style="background-image: url('[IMG/(#LOGO_ARTICLE|fichier)]'); height:50vh; width:100%;"></div>
+				</div>
+				
+			</section>
+		</B_test30>
+
+		<BOUCLE_test40(CONDITION){si #RANG|=={40}}> </BOUCLE_test40>
+			<section class="page-section">
+				
+				<div class="picture" id="why-picture"></div>
+				<div id='why-paragraph' class="text-black section-padding">
+					<h1 id="why-section-title" class="title text-primary text-center #EDIT{titre}">#TITRE</h1>
+					<h4 id="paragraph" class="text-black primary-font #EDIT{texte}">#TEXTE</h4>
+						
+
+				</div>
+			</section>
+		</B_test40>		
+	</BOUCLE_articles>
+	<section class="page-padding flex-column column-centered">
+		<BOUCLE_redirection(RUBRIQUES){meme_parent}>
+			<BOUCLE_mots(MOTS){id_rubrique}{titre_mot='rubrique_engagement'}>
+				<a href="#URL_RUBRIQUE" class="submit btn btn-xxl text-black-50">
+					<multi>[fr]S'engager maintenant[en]Commit now</multi>
+				</a>	
+			</BOUCLE_mots>
+		</BOUCLE_redirection>
+	</section>
+</BOUCLE_principale>

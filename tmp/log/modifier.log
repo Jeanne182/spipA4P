@@ -1,0 +1,20 @@
+2020-07-02 08:45:39 ::1 (pid 16660) :Pub:CRITIQUE: Erreur enregistrement en base signature/88 champs :array (
+  'association_alumni' => 
+  array (
+    'post' => 
+    array (
+      'id_association' => '7',
+    ),
+    'save' => '',
+  ),
+)
+2020-07-02 09:20:47 ::1 (pid 16660) :Pub:CRITIQUE: Erreur enregistrement en base signature/94 champs :array (
+  'association_alumni' => 
+  array (
+    'post' => 
+    array (
+      'id_association' => '7',
+    ),
+    'save' => '',
+  ),
+)

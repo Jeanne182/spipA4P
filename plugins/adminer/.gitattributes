@@ -1,0 +1,17 @@
+* text=auto !eol
+/adminer-24.png -text
+/adminer-64.png -text
+/adminer-80.png -text
+/adminer.css -text
+/adminer.html -text
+/adminer.php -text
+/adminer_options.php -text
+exec/adminer.php -text
+/index.php -text
+lang/paquet-adminer_fr.php -text
+/paquet.xml -text
+/plugin.xml -text
+plugins/database-limit.php -text
+plugins/login-sqlite.php -text
+plugins/plugin.php -text
+prive/themes/spip/images/adminer-16.png -text

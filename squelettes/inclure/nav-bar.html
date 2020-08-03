@@ -1,0 +1,51 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top flex-column" id="mainNav">
+    <div id="langage-selection" class='flex-row'>
+        [(#SET{langues,[(#CONFIG{langues_multilingue}|explode{','}|serialize)]})] 
+        #SET{langues,#ARRAY{1,fr,2,en}} 
+        <BOUCLE_langues(DATA){source table, #GET{langues}}> 
+            <p class="lien-langue-#VALEUR"> 
+                <a [(#VALEUR|=={#ENV{lang}}|oui)class="on"] href="[(#SELF|parametre_url{action,converser}|parametre_url{var_lang,#VALEUR}|parametre_url{redirect,[(#SELF|url_absolue)]})]" rel="alternate" title="[(#VALEUR|traduire_nom_langue)]"> 
+                    #VALEUR
+                </a>
+            </p> 
+        </BOUCLE_langues>
+
+    </div>
+    <div class="container" id="top-menu">
+        
+        <span class="flex-row column-centered">
+            <div class='logo_site-container mr-4'>
+                <img class="masthead-avatar" src="[(#_mots_rubrique_accueil:LOGO_SITE|extraire_attribut{src})]" alt="" />
+            </div>
+            <a class="navbar-brand js-scroll-trigger" href="#URL_SITE_SPIP/">
+                
+                <div class='text-uppercase'>#NOM_SITE_SPIP</div>
+                <h4 id="asso-description">#SLOGAN_SITE_SPIP</h4>
+            </a>
+        </span>
+        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                
+                <BOUCLE_rubriques(RUBRIQUES){titre_mot="rubrique_principale"}{racine}{par num titre}>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger menu-pannel bg-secondary text-white text-uppercase">#TITRE</a> <!--sf-with-ul -->
+                        <ul style="display: none; float: none; width: 13em;">
+                            <BOUCLE_sousRubriques(RUBRIQUES){id_parent}{par num titre}>
+                                <li style="white-space: normal; float: none; width: 100%;">                        
+                                        <a href="#URL_RUBRIQUE" class="menu-item #EDIT{titre}" style="float: none; width: auto;">#TITRE</a>
+                                </li>
+                            </BOUCLE_sousRubriques>
+                            <!-- <div class="separation-bar-menu-pannel"></div> -->                          
+                        </ul>
+                    </li>
+                </BOUCLE_rubriques>
+
+            </ul>
+        </div>
+    </div>
+</nav>

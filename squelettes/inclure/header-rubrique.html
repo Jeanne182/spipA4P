@@ -1,0 +1,39 @@
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+    <INCLURE{fond=inclure/header} />
+
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center rubrique-masthead flex-column row-centered" style="background-image: url('[(#LOGO_RUBRIQUE|extraire_attribut{src})]');">
+        
+        <div class="container d-flex align-items-center flex-column">
+            <!-- <div id="masthead-height" class="absolute"></div>
+            <script>
+                var height = $('.masthead').outerHeight();
+                $('#masthead-height').innerHeight(height);
+                console.log('height : ', height);
+            </script> -->
+
+            <!-- Masthead Heading-->
+                
+            <p class="arbo mt-3 absolute l-2 text-white">
+                <a href="#URL_SITE_SPIP/" class='text-white'><:accueil_site:></a>
+                <BOUCLE_ariane(HIERARCHIE){id_rubrique}> &gt; 
+                    <a class='text-white' href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a>
+                </BOUCLE_ariane>[ &gt; 
+                <strong class="on">
+                    (#TITRE|couper{80})
+                </strong>]
+            </p><!--.arbo-->
+            <h1 class="masthead-heading text-uppercase #EDIT{titre}">#TITRE</h1>  
+            [<span class="#EDIT{descriptif} lead">(#DESCRIPTIF)</span>]
+          
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+        <script>
+            var navHeight = $('#mainNav').outerHeight();
+            $('.arbo').css('top', navHeight);;
+        </script>
+    </header>
+</BOUCLE_principale>

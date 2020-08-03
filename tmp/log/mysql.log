@@ -1,0 +1,288 @@
+2020-06-24 09:35:00 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE NOT((L1.id_pays IN (
+SELECT L1.id_pays AS id
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE (L1.id_objet = 1))))
+	AND (L1.objet = 'auteur')
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:35:08 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE NOT((L1.id_pays IN (
+SELECT L1.id_pays AS id
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE (L1.id_objet = 1))))
+	AND (L1.objet = 'auteur')
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:36:59 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE NOT((L1.id_pays IN (
+SELECT L1.id_pays AS id
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE (L1.id_objet = 1))))
+	AND (L1.objet = 'auteur')
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:37:01 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE NOT((L1.id_pays IN (
+SELECT L1.id_pays AS id
+FROM `spip`.spip2_pays_liens AS `L1`  
+WHERE (L1.id_objet = 1))))
+	AND (L1.objet = 'auteur')
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:38:09 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays AS `pays`
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:38:40 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays AS `pays`
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:39:07 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays AS `pays`
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:39:30 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays AS `pays`
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:39:50 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays AS `pays`
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:40:06 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays AS `pays`
+GROUP BY pays
+ORDER BY pays
+2020-06-24 09:40:09 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'pays' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_payshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT pays, ''
+FROM `spip`.spip2_pays AS `pays`
+GROUP BY pays
+ORDER BY pays
+2020-06-24 15:54:42 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-24 15:55:05 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-24 15:55:15 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-24 15:55:23 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-24 15:55:24 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-24 17:07:57 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-24 17:07:59 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-25 07:50:27 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-25 07:51:08 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-06-25 07:51:12 ::1 (pid 33116) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'signatures.association_alumniL' inconnu dans field list
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1004 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_signatureshtml_20bad19474852c2c1a99d7289d969071(),html_20bad19474852c2c1a99d7289d969071(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include(),include()]
+SELECT signatures.nom_email, signatures.association_alumniL AS association_alumni
+FROM `spip`.spip2_signatures AS `signatures`
+2020-07-02 08:11:01 ::1 (pid 16660) :Pub:ERREUR: Erreur 1146 de mysql: La table 'spip.associations_alumni' n'existe pas
+in D:\wamp64\www\spip2\spip\plugins\engagements\formulaires\signature.php L216 [sql_select(),inc_controler_signature_dist(),formulaires_signature_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques(),include()]
+SELECT id_association
+FROM associations_alumni
+WHERE id_association =_request('session_association')
+2020-07-02 08:22:39 ::1 (pid 16660) :Pub:ERREUR: Erreur 1146 de mysql: La table 'spip.associations_alumni' n'existe pas
+in D:\wamp64\www\spip2\spip\plugins\engagements\formulaires\signature.php L216 [sql_select(),inc_controler_signature_dist(),formulaires_signature_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques(),include()]
+SELECT id_association
+FROM associations_alumni
+WHERE id_association =_request('session_association')
+2020-07-02 08:24:22 ::1 (pid 16660) :Pub:ERREUR: Erreur 1305 de mysql: FUNCTION spip._request does not exist
+in D:\wamp64\www\spip2\spip\plugins\engagements\formulaires\signature.php L216 [sql_select(),inc_controler_signature_dist(),formulaires_signature_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques(),include()]
+SELECT id_association
+FROM `spip`.spip2_associations_alumni
+WHERE id_association =_request('session_association')
+2020-07-02 08:25:36 ::1 (pid 16660) :Pub:ERREUR: Erreur 1305 de mysql: FUNCTION spip._request does not exist
+in D:\wamp64\www\spip2\spip\plugins\engagements\formulaires\signature.php L216 [sql_select(),inc_controler_signature_dist(),formulaires_signature_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques(),include()]
+SELECT id_association
+FROM `spip`.spip2_associations_alumni
+WHERE id_association =_request('session_association')
+2020-07-02 08:26:36 ::1 (pid 16660) :Pub:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de '"' à la ligne 3
+in D:\wamp64\www\spip2\spip\plugins\engagements\formulaires\signature.php L216 [sql_select(),inc_controler_signature_dist(),formulaires_signature_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques(),include()]
+SELECT id_association
+FROM `spip`.spip2_associations_alumni
+WHERE id_association =70"
+2020-07-02 08:28:21 ::1 (pid 16660) :Pub:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de ''' à la ligne 3
+in D:\wamp64\www\spip2\spip\plugins\engagements\formulaires\signature.php L216 [sql_select(),inc_controler_signature_dist(),formulaires_signature_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques(),include()]
+SELECT id_association
+FROM `spip`.spip2_associations_alumni
+WHERE id_association =70'
+2020-07-09 13:32:31 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 1' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 1
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 2' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 2
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 3' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 3
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 4' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 4
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 6' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 6
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 11' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 11
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 21' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 21
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 22' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 22
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 23' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 23
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 24' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 24
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 25' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 25
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 26' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 26
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 31' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 31
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 41' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 41
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 42' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 42
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 43' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 43
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 52' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 52
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 53' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 53
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 54' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 54
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 72' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 72
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 73' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 73
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 74' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 74
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 82' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 82
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 83' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 83
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 91' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 91
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 93' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 93
+2020-07-09 13:32:32 ::1 (pid 22960) :Pri:ERREUR: Erreur 1064 de mysql: Erreur de syntaxe près de 'WHERE code = 94' à la ligne 2
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L75 [sql_updateq(),cog_nouvelle_definition_regionale(),formulaires_importer_cog_traiter_dist(),call_user_func_array(),traiter_formulaires_dynamiques()]
+UPDATE `spip`.spip2_cog_regions_anciennes
+WHERE code = 94
+2020-07-09 15:05:57 ::1 (pid 22960) :Pri:ERREUR: Erreur 1051 de mysql: Table 'spip.spip2_cog_regions_anciennes' inconnue
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L45 [sql_drop_table(),cog_vider_tables(),spip_plugin_install(),plugins_installer_dist(),do_stop(),do_action(),one_action(),action_actionner_dist(),traiter_appels_actions()]
+DROP TABLE `spip`.spip2_cog_regions_anciennes
+2020-07-09 15:05:57 ::1 (pid 22960) :Pri:ERREUR: Erreur 1051 de mysql: Table 'spip.spip2_cog_epci_natures' inconnue
+in D:\wamp64\www\spip2\spip\plugins\cog\cog_administrations.php L47 [sql_drop_table(),cog_vider_tables(),spip_plugin_install(),plugins_installer_dist(),do_stop(),do_action(),one_action(),action_actionner_dist(),traiter_appels_actions()]
+DROP TABLE `spip`.spip2_cog_epci_natures
+2020-07-09 15:06:24 ::1 (pid 22960) :Pub:ERREUR: Erreur 1146 de mysql: La table 'spip.spip2_cog_communes' n'existe pas
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1005 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_communehtml_cdeebe99e052fcf31328113c64533213(),html_cdeebe99e052fcf31328113c64533213(),public_parametrer_dist(),public_produire_page_dist(),inclure_page(),evaluer_fond(),recuperer_fond(),inclure_balise_dynamique(),inserer_balise_dynamique(),eval(),include(),evaluer_fond(),recuperer_fond(),eval(),include(),include()]
+SELECT cog_communes.nom
+FROM `spip`.spip2_cog_communes AS `cog_communes`
+2020-07-10 14:45:39 ::1 (pid 22960) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'num' inconnu dans order clause
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1005 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_articleshtml_451006b260bc90beecb55a426ca84a5f(),BOUCLE_principalehtml_451006b260bc90beecb55a426ca84a5f(),html_451006b260bc90beecb55a426ca84a5f(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include()]
+SELECT articles.titre, articles.texte, articles.lang
+FROM `spip`.spip2_articles AS `articles`
+WHERE (articles.statut = 'publie')
+	AND (articles.id_rubrique = 12)
+ORDER BY num
+2020-07-10 14:55:59 ::1 (pid 22960) :Pub:ERREUR: Erreur 1054 de mysql: Champ 'num' inconnu dans order clause
+in D:\wamp64\www\spip2\spip\ecrire\public\composer.php L1005 [sql_select(),calculer_select(),select(),__construct(),create(),BOUCLE_articleshtml_451006b260bc90beecb55a426ca84a5f(),BOUCLE_principalehtml_451006b260bc90beecb55a426ca84a5f(),html_451006b260bc90beecb55a426ca84a5f(),public_parametrer_dist(),public_produire_page_dist(),assembler(),include()]
+SELECT articles.titre, articles.texte, articles.titre AS titre_rang, articles.lang
+FROM `spip`.spip2_articles AS `articles`
+WHERE (articles.statut = 'publie')
+	AND (articles.id_rubrique = 12)
+ORDER BY num

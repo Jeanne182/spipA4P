@@ -1,0 +1,90 @@
+<BOUCLE_principale(ARTICLES) {id_article}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+[(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
+<head>
+	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+	<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+	[<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
+	[<link rel="canonical" href="(#URL_ARTICLE|url_absolue)" />]
+	<INCLURE{fond=inclure/head} />
+</head>
+
+<body id="page-top">
+	<BOUCLE_menulangue(ARTICLES){id_article}>
+[(#REM) un menu langue plat qui redirige vers la traduction de l'article si elle existe ... sinon sur l'article en cours mais en ayant changé de langue pour l'interface]
+ 
+	[(#REM) on boucle sur les langues disponibles dans le public grâce à spip-bonux]
+	  [(#SET{langues,[(#CONFIG{langues_multilingue}|explode{','}|serialize)]})]
+	    <BOUCLE_langue_possibles(POUR){tableau #GET{langues}}>
+	      [(#REM) on récupère la traduction "potentielle" de l'article en cours]
+	      <BOUCLE_article_traduit(ARTICLES){traduction}{lang=#VALEUR}>
+	        [(#ENV{lang}|=={#VALEUR}|non)<a href="[(#URL_ACTION_AUTEUR{'converser',#VALEUR&var_lang=#VALEUR,[(#URL_ARTICLE|parametre_url{lang,'','&'})]})]">[(#VALEUR|traduire_nom_langue)]</a>]
+	     </BOUCLE_article_traduit>
+	     [(#REM) Si pas de traduction, on change bien la langue mais le lien reste sur la même page]
+	       [(#ENV{lang}|=={#VALEUR}|non)<a href="[(#URL_ACTION_AUTEUR{'converser',#VALEUR&var_lang=#VALEUR,[(#URL_ARTICLE|parametre_url{lang,'','&'})]})]">[(#VALEUR|traduire_nom_langue)]</a>]
+	    <//B_article_traduit>
+	 </BOUCLE_langue_possibles>
+</BOUCLE_menulangue>
+	<INCLURE{fond=inclure/header} />
+
+	<!-- Masthead-->
+	<header class="masthead bg-primary text-white text-center">
+		<div class="container d-flex align-items-center flex-column">
+			
+			<!-- Masthead Heading-->
+			<h1 class="masthead-heading text-uppercase mb-0">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</h1>
+			
+			<!-- Icon Divider-->
+			<div class="divider-custom divider-light">
+				<div class="divider-custom-line"></div>
+			</div>
+			<!-- Masthead Subheading-->
+			[<p class="masthead-subheading font-weight-light mb-0 #EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
+		</div>
+	</header>
+
+	<!-- Figures Section-->
+	<section class="page-section figures-section page-padding" id="figures">
+		<h1 class="text-primary title">LAISSERONS-NOUS NOS ENFANTS AGIR SEULS ?</h1>
+		</p>
+		<h4 id="paragraph" class="text-black">La communauté scientifique s’accorde à dire que les premiers efforts restent très insuffisants pour nous mettre sur la trajectoire d’un réchauffement climatique limité à 1,5/2°C. Le scénario tendanciel actuel correspond en effet à un réchauffement de 3 à 5°C.</h4>
+		</p>
+		<h4 id="paragraph" class="text-black">Il s’agit donc aujourd’hui, sans culpabilité mais avec courage, de tenir compte de ce que nous savons : que cette trajectoire nous mène à une catastrophe climatique et écologique dont les effets sans précéden affecteront tous les pays et toutes les populations bien avant la fin du siècle. Nous savons aussi qu’il est encore possible de limiter fortement l’ampleur de cette catastrophe, à condition d’opérer des changements  adicaux.</h4>
+		</p>
+		<h4 id="paragraph" class="text-black">Si ces changements sont difficiles, ils sont aussi porteurs d’espoir. Ils ne seront possibles que si nous nous mobilisons tous, de façon massive, et à très court terme. Pour créer collectivement un avenir meilleur, il nous appartient d’agir à notre niveau et selon nos moyens pour soutenir la cause que nos enfants eux-mêmes ont commencé à défendre.</h4>
+		
+	</section>
+
+	<!-- Why Section-->
+	<section class="page-section bg-primary" id="why-section">
+		<div class="picture" id="why-picture"></div>
+		<div id='why-paragraph' class="text-white page-padding">
+			<h1 id="why-section-title" class="title text-primary">COMMENT AGIR ?</h1>
+			<h4 id="paragraph" class="text-white">La planète Terre est un système complexe impacté par chacun de nos choix et chacune de nos activités. Agir pour corriger les dérèglements que nous avons induits peut se faire à différents niveaux, en utilisant différents points d’entrée environnementaux et sociétaux, et notamment en répondant à l’urgence climatique et écologique. </h4>
+			</p>
+			<h4 id="paragraph" class="text-white">En effet, les mécanismes de dérèglement climatiques sont connus scientifiquement depuis des décennies et les actions correctives sont bien répertoriées ; les impacts de la pollution et de la perte de biodiversité sont documentés et des propositions efficaces et activables existent. Il ne tient qu’à nous de les implémenter dans notre vie privée et dans notre vie professionnelle pour répondre aux défis écologiques et humains, en réorientant nos pratiques et nos activités vers plus de simplicité, plus de sobriété, plus de relations humaines, plus de sens.</h4>
+			</p>
+			<h4 id="paragraph" class="text-white">Ce faisant, nous rendrons nos activités et entreprises non seulement capables de résilience face aux conséquences du réchauffement climatique et de la raréfaction des ressources naturelles, mais aussi plus attractives pour les nombreux alumni, jeunes et moins jeunes, qui ne veulent plus avoir à choisir entre travailler et contribuer à une vie plus qualitative sur Terre.</h4>
+		</div>
+	</section>
+	
+	<INCLURE{fond=inclure/petition,id_article,env,ajax} />
+	
+	<!-- SPIP -->
+	<INCLURE{fond=inclure/footer,self=#SELF} />
+
+	<!-- Bootstrap core JS-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+	<!-- Third party plugin JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<!-- Core theme JS-->
+	[<script src="(#CHEMIN{js/scripts.js})"></script>]
+
+</body>
+</html>
+</BOUCLE_principale>

@@ -1,0 +1,225 @@
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+	<section class="section-padding-top flex-column column-centered">
+		<BOUCLE_redirection(RUBRIQUES){meme_parent}>
+			<BOUCLE_mots(MOTS){id_rubrique}{titre_mot='rubrique_manifeste'}>
+				<a href="#URL_RUBRIQUE" class="submit btn btn-xxl text-black-50">
+					<multi>[fr]Lire le manifeste[en]Read the manifesto</multi>
+				</a>	
+			</BOUCLE_mots>
+		</BOUCLE_redirection>
+	</section>
+	<div class="engagement-list-container section-padding-top">
+		<BOUCLE_engagements(RUBRIQUES){id_parent}>
+			<h4 class="flex-row row-centered primary-font text-dark-blue #EDIT{titre}">#TITRE</h4>	
+				<BOUCLE_numEngagement(ARTICLES){id_rubrique}>
+				<h4 id="paragraph" class="text-black flex-row column-centered engagement-list-item text-justify" style="margin-left: [(#COMPTEUR_BOUCLE|alterner{'6vw','10vw'})]; margin-right: [(#COMPTEUR_BOUCLE|alterner{'10vw','6rem'})];">
+					<div class='list-number text-yellow'>
+						#RANG.
+					</div> 
+					<div class='engagements-list primary-font #EDIT{titre}'>#TITRE</div>
+				</h4>
+			</BOUCLE_numEngagement>
+		</BOUCLE_engagements>
+	</div>
+	<INCLURE{fond=inclure/petition,id_article=1,env,ajax} />
+	<INCLURE{fond=inclure/rubriques/signatures} />
+	<section class="section-padding-bottom">
+		[(#INCLURE{fond=modeles/carte_gis,autocenterandzoom=oui,zoom=3})]
+	</section>
+	
+	<section class="page-padding">
+	<div class="formulaire_spip formulaire_configurer formulaire_configurer_gis">
+
+		[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+		[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+		
+		<div id="map_config" class="carte_gis" style="width: 100%; height: 370px"></div>
+		
+		<form method="post" action="#ENV{action}"><div>
+			#ACTION_FORMULAIRE{#ENV{action}}
+			<[(#DIV|sinon{ul})] class="editer-groupe">
+				<[(#DIV|sinon{li})] class="rechercher_adresse editer editer_map_config">
+					<label for="champ_map_config_geocoder"><:gis:label_rechercher_address:></label>
+					<input type="text" class="text" name="champ_map_config_geocoder" id="champ_map_config_geocoder" value="" />
+					<a id="map_config_rechercher_geocodage"><:info_rechercher:></a>
+				</[(#DIV|sinon{li})]>
+				[(#SAISIE{input,lat,
+					label=<:gis:lat:>,
+					defaut=0,
+					size=40})]
+				[(#SAISIE{input,lon,
+					label=<:gis:lon:>,
+					defaut=0,
+					size=40})]
+				[(#SAISIE{input,zoom,
+					label=<:gis:zoom:>,
+					defaut=0,
+					size=2,
+					maxlength=2})]
+				
+				#SET{layers,#ARRAY}
+				<BOUCLE_layer(DATA){source table, #EVAL{$GLOBALS['gis_layers']}}>
+				#SET{layers,#GET{layers}|array_merge{#ARRAY{#CLE,#VALEUR|table_valeur{nom}}}}
+				</BOUCLE_layer>
+				
+				[(#SET{layer_defaut,openstreetmap_mapnik})]
+				[(#VAL{_GIS_LAYER_DEFAUT}|defined|oui)
+					[(#SET{layer_defaut,[(#EVAL{_GIS_LAYER_DEFAUT})]})]
+				]
+				
+			</[(#DIV|sinon{ul})]>
+		
+		
+			<p class="boutons">
+				<input type="submit" name="_cfg_ok" class="submit" value="<:bouton_enregistrer:>" />
+			</p>
+		</div></form>
+		
+		<script type="text/javascript">
+		/*<![CDATA[*/
+		
+		(function($){
+			var map, map_container = 'map_config', geocoder, marker;
+			
+			var maj_inputs = function(map,pos,action) {
+				if(action == 'click'){
+					var zoom = map.getZoom();
+					$("#champ_lat").val(pos.lat);
+					$("#champ_lon").val(pos.lng);
+					$("#champ_zoom").val(zoom);
+					annuler_geocoder = 1;
+				}else if(annuler_geocoder != 1){
+					if(pos.point == 'undefined'){
+						$('#champ_#ENV{champ_lat,lat}').val(pos.lat);
+						$('#champ_#ENV{champ_lon,lon}').val(pos.lng);
+						map.panTo(pos);
+						marker.setLatLng(pos);
+					}else{
+						$('#champ_#ENV{champ_lat,lat}').val(pos.point.lat);
+						$('#champ_#ENV{champ_lon,lon}').val(pos.point.lng);
+						map.panTo(pos.point);
+						marker.setLatLng(pos.point);
+					}
+				}
+			}
+			
+			function geocode(query) {
+				if(!query.error)
+					maj_inputs(map,query,'geocoding');
+				else{
+					if(query.search == 'undefined'){
+						alert('<:gis:erreur_geocoder:>\n'+query.search);
+					}else{
+						alert('<:gis:erreur_geocoder:>');
+					}
+				}
+			}
+		
+			var init_config = function() {
+				map = new L.Map(map_container);
+				
+				map.attributionControl.setPrefix('');
+				
+				//default layer
+				#SET{layer_defaut,#REM|gis_layer_defaut} #SET{layers,#EVAL{$GLOBALS['gis_layers']}}
+				var [(#GET{layer_defaut})] = [new (#GET{layers}|table_valeur{#GET{layer_defaut}/layer})];
+				map.addLayer([(#GET{layer_defaut})]);
+				
+				<B_layers>
+				var layers_control = new L.Control.Layers();
+				layers_control.addBaseLayer([(#GET{layer_defaut})],["(#GET{layers}|table_valeur{#GET{layer_defaut}/nom})"]);
+				<BOUCLE_layers(DATA){source table, #GET{layers}}{si #ENV{control_type,#ENV{controle_type}}|!={non}|et{#ENV{no_control,#ENV{aucun_controle}}|!={oui}}|et{#CONFIG{gis/layers,#ARRAY}|count|>{1}|oui}|oui}>[
+				(#CLE|!={#GET{layer_defaut}}|oui|et{#CLE|in_array{#CONFIG{gis/layers,#ARRAY}}|oui}|oui)
+				layers_control.addBaseLayer([new (#VALEUR|table_valeur{layer})],"[(#VALEUR|table_valeur{nom})]");]
+				</BOUCLE_layers>
+				map.addControl(layers_control);
+				// classe noajax sur le layer_control pour éviter l'ajout de hidden par SPIP
+				$(layers_control._form).addClass('noajax');
+				</B_layers>
+		
+				map.setView(new L.LatLng(#ENV{lat,0},#ENV{lon,0}),#ENV{zoom,0});
+		
+				marker = new L.Marker(new L.LatLng(#ENV{lat,0},#ENV{lon,0}));
+				map.addLayer(marker);
+				
+				geocoder = new L.Geocoder(geocode,{acceptLanguage:'#ENV{lang}'});
+				
+				// mettre a jour les coordonnees quand on clique la carte
+				map.on('click', function(e) {
+					annuler_geocoder = 0;
+					marker.setLatLng(e.latlng);
+					map.panTo(e.latlng);
+					maj_inputs(map,e.latlng,'click');
+				});
+				
+				// geocoder si clic...
+				$('a#map_config_rechercher_geocodage').css("cursor","pointer").click(function(){
+					var address = $("#champ_map_config_geocoder").val();
+					annuler_geocoder = 0;
+					geocoder.geocode(address);
+				});
+				
+				// ne pas soumettre le formulaire si on presse Entree depuis le champ de recherche
+				$('#champ_map_config_geocoder').keypress(function(e){
+					if (e.which == 13) {
+						$('a#map_config_rechercher_geocodage').trigger("click");
+						return false;
+					}
+				});
+				
+				// mettre à jour le zoom quand on le modifie
+				map.on('zoomend', function(e) {
+					$("#champ_zoom").val(e.target._zoom);
+				});
+			}
+		
+			$(function(){
+				jQuery.getScript('[(#PRODUIRE{fond=javascript/gis.js})]',function(){
+					init_config();
+				});
+				//onAjaxLoad(init_config);
+			});
+		
+		})(jQuery);
+		/*]]>*/
+		</script>
+		</div>
+		
+		[(#ID_GIS|oui)
+	[(#AUTORISER{modifier,gis,#ID_GIS}|sinon_interdire_acces)]
+][(#ID_GIS|non)
+	[(#AUTORISER{creer,gis,#ID_GIS,'','',#ARRAY{associer_objet,#ENV{associer_objet}}}|sinon_interdire_acces)]
+]
+#SET{redirect,#ENV{redirect,#ENV{id_gis}|?{#URL_ECRIRE{gis,id_gis=#ID_GIS},#URL_ECRIRE{gis_tous}}}}
+
+#SET{objet, #ENV{objet, ''}}
+#SET{id_objet, #ENV{id_objet, 0}}
+[(#ENV{associer_objet}|oui)
+	[(#SET{array_objet, #ENV{associer_objet}|explode{'|'}})]
+	#SET{objet, #GET{array_objet}|table_valeur{0}}
+	#SET{id_objet, #GET{array_objet}|table_valeur{1}}
+]
+<div class='cadre-formulaire-editer'>
+<div class="entete-formulaire">
+	[(#ID_GIS|oui)
+	[(#GET{redirect}|icone_verticale{<:icone_retour:>,gis,'',left retour[(#ENV{retourajax,''}|oui)ajax preload]})]
+	]
+	[
+		[(#ID_GIS|?{<:gis:texte_modifier_gis:>,<:gis:texte_creer_gis:>})]
+		<h1>(#ENV{titre,#INFO_TITRE{gis,#ID_GIS}|sinon{<:gis:titre_nouveau_point:>}})</h1>
+	]
+</div>
+
+#SET{redirect,#ENV{redirect,#ID_GIS|generer_url_entite{gis}}}
+[(#ENV{retourajax,''}|oui)
+	#SET{redirect,'javascript:if (window.jQuery) jQuery(".entete-formulaire .retour a").followLink();'}
+	<div class="ajax">
+]
+		[(#FORMULAIRE_EDITER_GIS{#ENV{id_gis,oui},#GET{objet},#GET{id_objet},#GET{redirect},'',#ENV{associer_objet}})]
+[(#ENV{retourajax,''}|oui)
+	</div>
+	<script type="text/javascript">/*<!\[CDATA\[*/reloadExecPage('#ENV{exec}','#navigation,#chemin');/*\]\]>*/</script>
+]
+</div>
+</section>
+</BOUCLE_principale>

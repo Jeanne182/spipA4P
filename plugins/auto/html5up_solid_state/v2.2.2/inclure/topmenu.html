@@ -1,0 +1,35 @@
+<h2>Menu</h2>
+<ul class="links">
+	<B_langues>
+	<li class="principal">
+		<BOUCLE_langues(ARTICLES){fusion lang}{par lang}>[(#TOTAL_BOUCLE|>{1}|oui)
+		<a class="lang" href="#URL_SITE_SPIP/?lang=#LANG" rel="alternate"
+		   hreflang="#LANG" dir="#LANG_DIR" lang="#LANG"
+		   class="[(#LANG|=={#ENV{lang}}|?{on,''})]"
+		>[(#LANG)]</a>
+		]</BOUCLE_langues>
+	</li>
+	</B_langues>
+	<li><a class="accueil" href="#URL_SITE_SPIP"><:accueil_site:></a></li>
+
+<BOUCLE_rubrique_langue(RUBRIQUES){lang}{racine}{si #CONFIG{html5up_solid_state/multilinguisme_par_secteur}}>
+	<BOUCLE_articles(ARTICLES){par num titre, titre}{id_rubrique}>
+		<li><a href="#URL_ARTICLE">#TITRE</a></li>
+	</BOUCLE_articles>
+	<BOUCLE_sous_rubriques(RUBRIQUES){par num titre, titre}{lang}{id_parent}>
+		<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+	</BOUCLE_sous_rubriques>
+</BOUCLE_rubrique_langue>
+	<BOUCLE_rubriques(RUBRIQUES){par num titre, titre}{lang}{racine}>
+		<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+	</BOUCLE_rubriques>
+<//B_rubrique_langue>
+	<BOUCLE_si_contenu_contact(CONDITION)
+		{si #CONFIG{html5up_solid_state/contact_adresse}
+		|ou{#CONFIG{html5up_solid_state/contact_telephone}}
+		|ou{#PLUGIN{contact}}
+		|ou{#PLUGIN{sociaux}}}>
+		<li><a href="#URL_SITE_SPIP/#contacter" ><:contact:></a></li>
+	</BOUCLE_si_contenu_contact>
+</ul>
+

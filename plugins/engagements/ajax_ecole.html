@@ -1,0 +1,11 @@
+#CACHE{0}
+#HTTP_HEADER{Content-Type: text/html; charset=#CHARSET}
+
+<B_ecole>
+<option value="" data-status="plenty"><multi>[fr]Veuillez selectionner une école[en]Please select a school</multi></option>
+<BOUCLE_ecole(ecoles_alumni){id_pays}{par nom}{statut='publie'}>
+    <option value="#ID_ECOLE">#NOM</option>
+</BOUCLE_ecole>
+</B_ecole>
+    <option value="" data-status="empty"><multi>[fr]Aucune école n'est enregistrée pour ce pays[en]No school has been registered for this country</multi></option>
+<//B_ecole>

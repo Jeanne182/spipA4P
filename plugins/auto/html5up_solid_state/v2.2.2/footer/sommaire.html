@@ -1,0 +1,28 @@
+<BOUCLE_si_contenu_contact(CONDITION)
+	{si #CONFIG{html5up_solid_state/contact_adresse}
+		|ou{#CONFIG{html5up_solid_state/contact_telephone}}
+		|ou{#PLUGIN{contact}}
+		|ou{#PLUGIN{sociaux}}}>
+<h2 class="major" id="contacter"><:contact:></h2>
+
+[(#PLUGIN{contact}|oui)
+<div class="contact_form">
+	<div class="ajax">
+	#FORMULAIRE_CONTACT
+	</div>
+</div>
+]
+
+<ul class="contact">
+	[<li class="fa-home">(#CONFIG{html5up_solid_state/contact_adresse}|propre|ptobr)</li>]
+	[<li class="fa-phone">(#CONFIG{html5up_solid_state/contact_telephone})</li>]
+	[<li class="fa-envelope"><a href="mailto:#CONFIG{sociaux/mail}">(#CONFIG{sociaux/mail})</a></li>]
+
+	[(#REM) Avec plugin sociaux ]
+	[(#SET{rezo,[(#PIPELINE{sociaux_lister,#ARRAY{args,#ARRAY{skel,#SQUELETTE,date,#ENV**{date}},data,#ARRAY}})]})]
+	<BOUCLE_sociaux(DATA){source tableau,#GET{rezo}}{cle !IN mail}>
+		#SET{icone,fa-#CLE}
+		[<li class="#GET{icone}"><a href="(#CONFIG{sociaux/#CLE})">#VALEUR</a></li>]
+	</BOUCLE_sociaux>
+</ul>
+</BOUCLE_si_contenu_contact>

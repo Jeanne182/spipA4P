@@ -1,0 +1,25 @@
+2020-06-25 07:59:27 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.tab-focus is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap2/bootstrap/css/reset.less
+2020-06-25 07:59:28 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :variable @gridColumnWidth is undefined in file D:/wamp64/www/spip2/spip/plugins/bootstrap2/bootstrap/css/reset.less in reset.less on line 4, column 34
+2| // Reset CSS
+3| // Adapted from http://github.com/necolas/normalize.css
+4| // --------------------------------------------------
+5| 
+6| 
+7| // Display in IE6-9 and FF3
+2020-06-25 07:59:31 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.tab-focus is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap2/bootstrap/css/reset.less
+2020-06-25 07:59:31 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :variable @gridColumnWidth is undefined in file D:/wamp64/www/spip2/spip/plugins/bootstrap2/bootstrap/css/reset.less in reset.less on line 4, column 34
+2| // Reset CSS
+3| // Adapted from http://github.com/necolas/normalize.css
+4| // --------------------------------------------------
+5| 
+6| 
+7| // Display in IE6-9 and FF3
+2020-06-25 08:03:01 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/box.less
+2020-06-25 08:03:04 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/grid.less
+2020-06-25 08:03:28 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/grid.less
+2020-06-25 08:03:51 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/grid.less
+2020-06-25 08:04:05 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/grid.less
+2020-06-25 08:04:07 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/grid.less
+2020-06-25 08:04:31 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/grid.less
+2020-06-25 08:04:34 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/grid.less
+2020-06-25 08:33:05 ::1 (pid 33116) :Pub:ERREUR: LESS Echec compilation :.make-grid-columns is undefined in D:/wamp64/www/spip2/spip/plugins/bootstrap3/bootstrap2spip/css/box.less

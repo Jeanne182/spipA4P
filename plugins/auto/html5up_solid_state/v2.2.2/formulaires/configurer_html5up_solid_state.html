@@ -1,0 +1,117 @@
+<div class="formulaire_spip formulaire_configurer formulaire_#FORM">
+
+	<h3 class="titrem"><:html5up_solid_state:documentation_titre:></h3>
+
+	<p><:html5up_solid_state:documentation_texte:></p>
+
+</div>
+
+<div class="formulaire_spip formulaire_configurer formulaire_#FORM">
+
+	<h3 class="titrem"><:html5up_solid_state:cfg_titre_parametrages:></h3>
+
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+
+	<form method="post" action="#ENV{action}">
+	<div>
+		#ACTION_FORMULAIRE
+
+		<fieldset>
+			<legend>Décoration</legend>
+			<div class="editer-groupe">
+				[(#SAISIE{selecteur_document,image_background,
+					label=Image de fond,
+					explication=Image de la médiathèque utilisée comme image de fond du thème.})]
+
+				[(#SAISIE{input,couleur_bg,
+					label=Couleur sombre principale,
+					explication=Couleur sombre principale déclinée à différents endroits du thème,
+					class=palette,
+					defaut=#2e3141})]
+
+				[(#SAISIE{input,couleur_accent,
+					label=Couleur vive principale,
+					explication=Couleur vive déclinée à différents endroits du thème,
+					class=palette,
+					defaut=#4c5c96})]
+
+				[(#SAISIE{input,couleur_texte,
+					label=Couleur du texte,
+					class=palette,
+					defaut=#ffffff})]
+
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Accueil</legend>
+			<div class="editer-groupe">
+
+				[(#SAISIE{selecteur_rubrique,rubrique_hero,
+					label=Rubrique héro,
+					explication=Rubrique affichée sous forme de grille sur la page d'accueil.})]
+					
+				[(#SAISIE{input,rubrique_hero_pagination,
+					label=Pagination rubrique héro,
+					explication=Nombre d'articles de la rubrique héro à afficher sur l'accueil})]
+
+				[(#SAISIE{textarea,contact_adresse,
+					label=Adresse de contact,
+					rows=4})]
+
+				[(#SAISIE{input,contact_telephone,
+					label=Téléphone})]
+					
+				<div class="editer pleine_largeur">
+					<span class="explication">
+						[(#PLUGIN{contact}|non)
+							Activer le plugin «Formulaire de contact avancé» pour afficher un formulaire de contact
+						][(#PLUGIN{contact}|oui)
+						<a href="#URL_ECRIRE{configurer_contact}">Configurer le plugin : Contact</a>
+						]
+					</span>
+				</div>
+
+				<div class="editer pleine_largeur">
+					<span class="explication">
+						[(#PLUGIN{sociaux}|non)
+							Activer le plugin «Liens vers les réseaux sociaux» pour afficher de tels liens.
+						][(#PLUGIN{sociaux}|oui)
+						<a href="#URL_ECRIRE{configurer_sociaux}">Configurer le plugin : «Liens vers les réseaux sociaux»</a>
+						]
+					</span>
+				</div>
+		
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Pied de page</legend>
+			<div class="editer-groupe">
+				[(#SAISIE{textarea, pied_citation,
+					label=Citation en pied de page,
+					rows=4})]
+
+				[(#SAISIE{textarea, pied_description,
+					label=Description en pied de page,
+					rows=4})]
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Options</legend>
+			<div class="editer-groupe">
+				[(#SAISIE{input,introduction_couper,
+					label=Longueur introductions,
+					explication=Nombre de caractères des introductions,
+					defaut=250})]
+
+				[(#SAISIE{case,multilinguisme_par_secteur,
+					label=Multilinguisme,
+					label_case=Gérer un multilinguisme par secteur de langue})]
+			</div>
+		</fieldset>
+
+		<input type="hidden" name="_meta_casier" value="html5up_solid_state" />
+		<p class="boutons"><span class="image_loading">&nbsp;</span><input type="submit" class="submit" value="<:bouton_enregistrer:>" /></p>
+	</div>
+	</form>
+</div>

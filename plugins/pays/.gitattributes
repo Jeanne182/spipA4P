@@ -1,0 +1,42 @@
+* text=auto !eol
+action/dissocier_pays.php -text
+base/pays.php -text
+base/pays_peupler_base.php -text
+demo/pays.html -text
+formulaires/configurer_pays.html -text
+inc/listes/pays.html -text
+inc/select/pays.html -text
+lang/paquet-pays_de.php -text
+lang/pays_de.php -text
+lang/pays_en.php -text
+lang/pays_fr.php -text
+outils/migration_nom_pays.php -text
+/paquet.xml -text
+/pays_administrations.php -text
+/pays_autorisations.php -text
+/pays_pipelines.php -text
+prive/objets/contenu/pays.html -text
+prive/objets/infos/pay.html -text
+prive/objets/infos/pays.html -text
+prive/objets/liste/pays.html -text
+prive/objets/liste/pays_associer.html -text
+prive/objets/liste/pays_associer_fonctions.php -text
+prive/objets/liste/pays_lies.html -text
+prive/objets/liste/pays_lies_fonctions.php -text
+prive/squelettes/contenu/configurer_pays.html -text
+prive/squelettes/contenu/pays.html -text
+prive/squelettes/contenu/pays_tous.html -text
+prive/themes/spip/images/pay-24.png -text
+prive/themes/spip/images/pay-32.png -text
+prive/themes/spip/images/pays-12.png -text
+prive/themes/spip/images/pays-16.png -text
+prive/themes/spip/images/pays-24.png -text
+prive/themes/spip/images/pays-32.png -text
+prive/themes/spip/images/pays-64.png -text
+saisies-analyses/pays.html -text svneol=unset#text/plain
+saisies-vues/pays.html -text svneol=unset#text/plain
+saisies/pays.html -text
+saisies/pays.yaml -text
+saisies/pays_codealpha3.html -text
+saisies/pays_codenum.html -text
+saisies/pays_nom.html -text

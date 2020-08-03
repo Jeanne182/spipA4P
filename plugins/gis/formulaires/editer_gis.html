@@ -1,0 +1,71 @@
+#CACHE{0}
+
+<div class="flex-column mb-lg-4">
+	<div class='form-group controls flex-row pb-2'>
+		<strong class="l-h-25 text-dark-blue">Ville de l'entreprise :</strong>
+		[(#SAISIE{input,ville,
+			class='form-control disable',
+			
+			defaut=#ENV{ville}})]					
+		</div>
+
+
+
+	<div class='form-group flex-row controls pb-2'>
+		<strong class="l-h-25 text-dark-blue">Pays de l'entreprise :</strong>
+		[(#SAISIE{input,pays,
+			
+			class='form-control',
+			defaut=#ENV{pays}})]
+	</div>
+
+</div>
+
+<fieldset>
+	[(#SAISIE{carte,editer_gis_#ENV{id_gis},env,zoom=2, autocenterandzoom = oui})]
+</fieldset>
+			
+			
+<fieldset>
+	
+		[(#SAISIE{hidden,lat,
+			label=<:gis:lat:>,
+			defaut=#ENV{lat,#CONFIG{gis/lat,0}},
+			obligatoire=oui})]
+		
+		[(#SAISIE{hidden,lon,
+			label=<:gis:lon:>,
+			defaut=#ENV{lon,#CONFIG{gis/lon,0}},
+			obligatoire=oui})]
+
+		
+		[(#SAISIE{hidden,region,
+			label=<:gis:label_region:>})]
+		
+			
+		
+		
+			
+		
+		[(#SAISIE{hidden,zoom,
+			label=<:gis:zoom:>,
+			defaut=#ENV{zoom,#CONFIG{gis/zoom,0}},
+			size=2,
+			maxlength=2,
+			obligatoire=oui})]
+
+		[(#SAISIE{hidden,titre,
+			label=<:info_titre:>,
+			obligatoire=oui})]
+	
+	[(#SAISIE{hidden,descriptif,
+			label=<:info_descriptif:>,
+			rows=5})]
+	
+</fieldset>
+			
+			
+		
+		
+		
+

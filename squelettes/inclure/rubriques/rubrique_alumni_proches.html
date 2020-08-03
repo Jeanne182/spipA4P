@@ -1,0 +1,10 @@
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+    <section class="page-padding">
+		[(#INCLURE{fond=modeles/carte_gis,autocenterandzoom=oui, tooltip=oui})]
+    </section>
+    
+	<INCLURE{fond=inclure/rubriques/signatures,id_article=1,env,ajax=signatures} />
+	
+</div>
+</section>
+</BOUCLE_principale>
